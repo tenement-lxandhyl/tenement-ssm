@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.lx.mapper.OrderMapper">
+    <select id="orderListone" parameterType="Order" resultType="Order">
+        select * from order_ <where>
+        <if test='o_id != null and o_id !=""'>
+            and o_id=#{o_id}
+        </if>
+        <if test='u_id != null and u_id !=""'>
+            and u_id like '%${u_id}%'
+        </if>
+        <if test='o_status != null and o_status !=""'>
+            and o_status like '%${o_status}%'
+        </if>
+    </where>
+    </select>
+    <insert id="orderAdd" parameterType="Order">
+        insert into order_(o_id,u_id,h_id,o_starttime,o_totalmonth,o_status)
+        values (#{o_id},#{u_id},#{h_id},#{o_starttime},#{o_totalmonth},#{o_status})
+    </insert>
+    <update id="orderUpdate" parameterType="Order">
+        update order_ set u_id=#{u_id},h_id=#{h_id},o_starttime=#{o_starttime},o_totalmonth=#{o_totalmonth},o_status=#{o_status}
+        where o_id=#{o_id}
+    </update>
+    <delete id="orderDelete" parameterType="Order">
+        delete from order_ where o_id=#{o_id}
+    </delete>
+    <update id="orderUpzt" parameterType="Order">
+        update order_ set o_status=#{o_status}
+        where o_id=#{o_id}
+    </update>
+</mapper>

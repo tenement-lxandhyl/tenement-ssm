@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.lx.mapper.AdminMapper">
+    <select id="adminListOne" resultType="Admin" parameterType="Admin">
+       select * from admin <where>
+        <if test='a_id != null and a_id != ""'>
+            and a_id=#{a_id}
+        </if>
+        <if test='a_pass != null and a_pass != ""'>
+            and a_pass=#{a_pass}
+        </if>
+    </where>
+    </select>
+    <update id="adminUpdate" parameterType="Admin">
+        update   admin set a_nickname=#{a_nickname},a_pass=#{a_pass},a_name=#{a_name},a_number=#{a_number} where a_id=#{a_id}
+    </update>
+    <insert id="adminAdd" parameterType="Admin">
+        insert into admin(a_id,a_nickname,a_pass,a_name,a_number) values (#{a_id},#{a_nickname},#{a_pass},#{a_name},#{a_number})
+    </insert>
+    <delete id="adminDelete" parameterType="Admin">
+        delete from admin where a_id=#{a_id}
+    </delete>
+</mapper>

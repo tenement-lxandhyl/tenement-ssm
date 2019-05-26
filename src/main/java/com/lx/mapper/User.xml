@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.lx.mapper.UserMapper">
+    <select id="userListOne" parameterType="User" resultType="User">
+        select  *  from user_
+        <where>
+            <if test='u_id != null and u_id != ""'>
+                and  u_id=#{u_id}
+            </if>
+            <if test='u_pass != null and u_pass != ""'>
+                and  u_pass=#{u_pass}
+            </if>
+        </where>
+    </select>
+    <delete id="userDelete" parameterType="User">
+        delete from user_ where  u_id=#{u_id}
+    </delete>
+    <update id="userUpdate" parameterType="User">
+        update user_ set u_nickname=#{u_nickname},u_pass=#{u_pass},u_name=#{u_name},u_number=#{u_number},u_sex=#{u_sex},u_birthday=#{u_birthday},u_idcard=#{u_idcard},u_status=#{u_status}
+        where u_id=#{u_id}
+    </update>
+    <insert id="userAdd" parameterType="User">
+        insert into user_(u_id,u_nickname,u_pass,u_name,u_number,u_sex,u_birthday,u_idcard,u_status)
+        values (#{u_id},#{u_nickname},#{u_pass},#{u_name},#{u_number},#{u_sex},#{u_birthday},#{u_idcard},#{u_status})
+    </insert>
+</mapper>

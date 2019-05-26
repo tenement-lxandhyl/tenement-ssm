@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.lx.mapper.NewsMapper">
+	<insert id="addnews" parameterType="News">
+		insert into news(n_id,n_titie,n_content,n_time,n_author,n_i_address) values (#{n_id},#{n_titie},#{n_content},#{n_time},#{n_author},#{n_i_address})
+	</insert>
+	<delete id="deletenews" parameterType="News">
+		delete from  news where  n_id=#{n_id}
+	</delete>
+	<update id="updatenews" parameterType="News">
+		update news set n_titie=#{n_titie},n_content=#{n_content},n_time=#{n_time},n_author=#{n_author},n_i_address=#{n_i_address}
+		where n_id=#{n_id}
+	</update>
+	<select id="newsone" parameterType="News" resultType="News">
+		select * from  news <where>
+		<if test='n_id != null and n_id != "" '>
+			and n_id =#{n_id}
+		</if>
+	</where>
+	</select>
+</mapper>
