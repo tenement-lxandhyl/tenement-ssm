@@ -1,60 +1,71 @@
 package com.lx.pojo;
 
+import com.hyl.biz.Enum.OrderStatus;
+
 import java.sql.Date;
 
-public class Order {
-    private String o_id;
-    private String u_id;
-    private String h_id;
-    private Date o_starttime;
-    private Integer o_totalmonth;
-    private String o_status;
+public class Order extends BaseModel {
+    private String id;
+    private String userId;
+    private String houseId;
+    private Date startTime;
+    private Date endTime;
+    private Integer totalMonth;
+    private OrderStatus orderStatus;
 
-    public String getO_id() {
-        return o_id;
+    public String getId() {
+        return id;
     }
 
-    public void setO_id(String o_id) {
-        this.o_id = o_id;
+    public void setId(String id) {
+        this.id = id;
     }
 
-    public String getU_id() {
-        return u_id;
+    public String getUserId() {
+        return userId;
     }
 
-    public void setU_id(String u_id) {
-        this.u_id = u_id;
+    public void setUserId(String userId) {
+        this.userId = userId;
     }
 
-    public String getH_id() {
-        return h_id;
+    public String getHouseId() {
+        return houseId;
     }
 
-    public void setH_id(String h_id) {
-        this.h_id = h_id;
+    public void setHouseId(String houseId) {
+        this.houseId = houseId;
     }
 
-    public Date getO_starttime() {
-        return o_starttime;
+    public Date getStartTime() {
+        return startTime;
     }
 
-    public void setO_starttime(Date o_starttime) {
-        this.o_starttime = o_starttime;
+    public void setStartTime(Date startTime) {
+        this.startTime = startTime;
     }
 
-    public Integer getO_totalmonth() {
-        return o_totalmonth;
+    public Date getEndTime() {
+        return endTime;
     }
 
-    public void setO_totalmonth(Integer o_totalmonth) {
-        this.o_totalmonth = o_totalmonth;
+    public void setEndTime(Date endTime) {
+        this.endTime = endTime;
     }
 
-    public String getO_status() {
-        return o_status;
+    public Integer getTotalMonth() {
+        return totalMonth;
     }
 
-    public void setO_status(String o_status) {
-        this.o_status = o_status;
+    public void setTotalMonth(Integer totalMonth) {
+        this.totalMonth = totalMonth;
+    }
+
+    public OrderStatus getOrderStatus() {
+        return orderStatus;
+    }
+
+    public void setOrderStatus(OrderStatus orderStatus) {
+        this.orderStatus = orderStatus;
     }
 }

@@ -2,7 +2,6 @@ package com.lx.service.impl;
 
 import com.lx.mapper.HouseMapper;
 import com.lx.pojo.House;
-import com.lx.pojo.MaxMin;
 import com.lx.service.HouseService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

@@ -3,7 +3,6 @@ package com.lx.controller;
 
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
-import com.lx.pojo.Category;
 import com.lx.service.CategoryService;
 import com.lx.util.Page;
 import org.springframework.beans.factory.annotation.Autowired;

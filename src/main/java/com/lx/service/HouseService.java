@@ -1,7 +1,6 @@
 package com.lx.service;
 
 import com.lx.pojo.House;
-import com.lx.pojo.MaxMin;
 
 import java.util.List;
 

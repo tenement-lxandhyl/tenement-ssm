@@ -1,9 +1,6 @@
 package com.lx.controller;
-import com.lx.pojo.House;
-import com.lx.pojo.Order;
 import com.lx.service.OrderService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;

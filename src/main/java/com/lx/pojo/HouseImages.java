@@ -1,31 +1,31 @@
 package com.lx.pojo;
 
 public class HouseImages {
-    private String h_i_id;
-    private String h_i_address;
-    private String h_id;
+    private String img_id;
+    private String img_url;
+    private String id;
 
-    public String getH_i_id() {
-        return h_i_id;
+    public String getImg_id() {
+        return img_id;
     }
 
-    public void setH_i_id(String h_i_id) {
-        this.h_i_id = h_i_id;
+    public void setImg_id(String img_id) {
+        this.img_id = img_id;
     }
 
-    public String getH_i_address() {
-        return h_i_address;
+    public String getImg_url() {
+        return img_url;
     }
 
-    public void setH_i_address(String h_i_address) {
-        this.h_i_address = h_i_address;
+    public void setImg_url(String img_url) {
+        this.img_url = img_url;
     }
 
-    public String getH_id() {
-        return h_id;
+    public String getId() {
+        return id;
     }
 
-    public void setH_id(String h_id) {
-        this.h_id = h_id;
+    public void setId(String id) {
+        this.id = id;
     }
 }

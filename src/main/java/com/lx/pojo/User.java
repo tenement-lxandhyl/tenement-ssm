@@ -1,87 +1,89 @@
 package com.lx.pojo;
 
+import com.hyl.biz.Enum.SexType;
+
 import java.sql.Date;
 
-public class User extends BaseModel{
-    private String u_id;
-    private String u_nickname;
-    private String u_pass;
-    private String u_name;
-    private String u_number;
-    private String u_sex;
-    private Date u_birthday;
-    private String u_idcard;
-    private String u_status;
+public class User extends BaseModel {
+    private String id;
+    private String nickName;
+    private String pass;
+    private String name;
+    private String phone;
+    private SexType sexType;
+    private Date birthday;
+    private String idcard;
+    private String status;
 
-    public String getU_id() {
-        return u_id;
+    public String getId() {
+        return id;
     }
 
-    public void setU_id(String u_id) {
-        this.u_id = u_id;
+    public void setId(String id) {
+        this.id = id;
     }
 
-    public String getU_nickname() {
-        return u_nickname;
+    public String getNickName() {
+        return nickName;
     }
 
-    public void setU_nickname(String u_nickname) {
-        this.u_nickname = u_nickname;
+    public void setNickName(String nickName) {
+        this.nickName = nickName;
     }
 
-    public String getU_pass() {
-        return u_pass;
+    public String getPass() {
+        return pass;
     }
 
-    public void setU_pass(String u_pass) {
-        this.u_pass = u_pass;
+    public void setPass(String pass) {
+        this.pass = pass;
     }
 
-    public String getU_name() {
-        return u_name;
+    public String getName() {
+        return name;
     }
 
-    public void setU_name(String u_name) {
-        this.u_name = u_name;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public String getU_number() {
-        return u_number;
+    public String getPhone() {
+        return phone;
     }
 
-    public void setU_number(String u_number) {
-        this.u_number = u_number;
+    public void setPhone(String phone) {
+        this.phone = phone;
     }
 
-    public String getU_sex() {
-        return u_sex;
+    public SexType getSexType() {
+        return sexType;
     }
 
-    public void setU_sex(String u_sex) {
-        this.u_sex = u_sex;
+    public void setSexType(SexType sexType) {
+        this.sexType = sexType;
     }
 
-    public Date getU_birthday() {
-        return u_birthday;
+    public Date getBirthday() {
+        return birthday;
     }
 
-    public void setU_birthday(Date u_birthday) {
-        this.u_birthday = u_birthday;
+    public void setBirthday(Date birthday) {
+        this.birthday = birthday;
     }
 
-    public String getU_idcard() {
-        return u_idcard;
+    public String getIdcard() {
+        return idcard;
     }
 
-    public void setU_idcard(String u_idcard) {
-        this.u_idcard = u_idcard;
+    public void setIdcard(String idcard) {
+        this.idcard = idcard;
     }
 
-    public String getU_status() {
-        return u_status;
+    public String getStatus() {
+        return status;
     }
 
-    public void setU_status(String u_status) {
-        this.u_status = u_status;
+    public void setStatus(String status) {
+        this.status = status;
     }
 }

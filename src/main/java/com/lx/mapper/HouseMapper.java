@@ -1,7 +1,6 @@
 package com.lx.mapper;
 
 import com.lx.pojo.House;
-import com.lx.pojo.MaxMin;
 
 import java.util.List;
 
