@@ -1,6 +1,6 @@
 package com.lx.pojo;
 
-import com.hyl.biz.Enum.SexType;
+import com.lx.pojo.Enum.SexType;
 
 import java.sql.Date;
 

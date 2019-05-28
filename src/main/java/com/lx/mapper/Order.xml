@@ -6,30 +6,30 @@
 <mapper namespace="com.lx.mapper.OrderMapper">
     <select id="orderListone" parameterType="Order" resultType="Order">
         select * from order_ <where>
-        <if test='o_id != null and o_id !=""'>
-            and o_id=#{o_id}
+        <if test='id != null and id !=""'>
+            and id=#{id}
         </if>
         <if test='u_id != null and u_id !=""'>
             and u_id like '%${u_id}%'
         </if>
-        <if test='o_status != null and o_status !=""'>
-            and o_status like '%${o_status}%'
+        <if test='status != null and status !=""'>
+            and status like '%${status}%'
         </if>
     </where>
     </select>
     <insert id="orderAdd" parameterType="Order">
-        insert into order_(o_id,u_id,h_id,o_starttime,o_totalmonth,o_status)
-        values (#{o_id},#{u_id},#{h_id},#{o_starttime},#{o_totalmonth},#{o_status})
+        insert into order_(id,u_id,h_id,starttime,totalmonth,status)
+        values (#{id},#{u_id},#{h_id},#{starttime},#{totalmonth},#{status})
     </insert>
     <update id="orderUpdate" parameterType="Order">
-        update order_ set u_id=#{u_id},h_id=#{h_id},o_starttime=#{o_starttime},o_totalmonth=#{o_totalmonth},o_status=#{o_status}
-        where o_id=#{o_id}
+        update order_ set u_id=#{u_id},h_id=#{h_id},starttime=#{starttime},totalmonth=#{totalmonth},status=#{status}
+        where id=#{id}
     </update>
     <delete id="orderDelete" parameterType="Order">
-        delete from order_ where o_id=#{o_id}
+        delete from order_ where id=#{id}
     </delete>
     <update id="orderUpzt" parameterType="Order">
-        update order_ set o_status=#{o_status}
-        where o_id=#{o_id}
+        update order_ set status=#{status}
+        where id=#{id}
     </update>
 </mapper>
