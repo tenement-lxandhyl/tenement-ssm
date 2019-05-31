@@ -1,7 +1,7 @@
 package com.lx.pojo;
 
-import com.lx.pojo.Enum.HouseStatus;
-import com.lx.pojo.Enum.LeaseType;
+import com.lx.pojo.enums.HouseStatus;
+import com.lx.pojo.enums.LeaseType;
 
 public class House {
     private String id;

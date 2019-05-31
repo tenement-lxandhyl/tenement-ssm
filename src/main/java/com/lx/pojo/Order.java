@@ -1,6 +1,6 @@
 package com.lx.pojo;
 
-import com.lx.pojo.Enum.OrderStatus;
+import com.lx.pojo.enums.OrderStatus;
 
 import java.sql.Date;
 
